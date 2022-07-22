@@ -8,13 +8,17 @@ output_item = input("Output: ").lower()
 how_many = input("How many?: ")
 loops = input("Loops: ")
 amount_of_devices = int(input("Amount of devices(maximum of 6): "))
+working_devices = ["press", "saw", "deployer", "spout"]
 
 
 def add_device(device):
+    if device not in working_devices:
+        print("Device not recognized")
+        device = input("Device: ")
     device = device.lower()
     dicte = {
-        "press": ".addStep(<recipetype:create:pressing>.factory(), (rb) => rb.duration(500))",
-        "saw": ".addStep(<recipetype:create:cutting>.factory(), (rb) => rb.duration(50))"
+        "press": ".addStep(<recipetype:create:pressing>.factory(), (rb) => rb.duration(200))",
+        "saw": ".addStep(<recipetype:create:cutting>.factory(), (rb) => rb.duration(200))"
     }
     if device == "spout":
         fluid = input("Spout fluid: ").lower()
