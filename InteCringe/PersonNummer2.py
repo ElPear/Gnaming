@@ -31,6 +31,11 @@ elif gender.lower() == "kvinna":
 else:
     threeLast = 123
 
+if threeLast < 100:
+    threeLast = "0"+str(threeLast)
+elif threeLast < 10:
+    threeLast = "00"+str(threeLast)
+
 if mode.lower() == "generate":
     print(f"{year} {month} {day} {threeLast}")
 
