@@ -67,15 +67,17 @@ for i in range(0, len(processedList)):
     theSum += int(processedList[index])
     index += 1
 
-theLastFuckingOne = round(theSum+5, -1) - theSum
+if theSum % 10 == 0:
+    theLastActualOneReal = "0"
+else:
+    theLastActualOneReal = round(theSum + 5, -1) - theSum
 
 if mode.lower() == "generate":
-    personNummer = f"{year}{month}{day}-{threeLast}{theLastFuckingOne}"
+    personNummer = f"{year}{month}{day}-{threeLast}{theLastActualOneReal}"
     print(personNummer)
 
 if mode.lower() == "verify":
-    if str(lastDude) == str(theLastFuckingOne):
+    if str(lastDude) == str(theLastActualOneReal):
         print("valid")
     else:
         print("invalid")
-
