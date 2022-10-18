@@ -37,7 +37,7 @@ elif threeLast < 10:
     threeLast = "00"+str(threeLast)
 
 if mode.lower() == "generate":
-    print(f"{year} {month} {day} {threeLast}")
+    print(f"{year} {month} {day}")
 
 year = str(year)[len(str(year))-2:]
 
