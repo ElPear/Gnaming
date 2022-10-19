@@ -27,4 +27,4 @@ private void Clear(object sender, EventArgs e)
 {
     lableText = "";
     label.Text = lableText;
-}A
+}
