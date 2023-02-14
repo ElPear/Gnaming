@@ -1,12 +1,12 @@
-        private bool Colliding(PictureBox item_one, PictureBox item_two)
+        private bool Colliding(PictureBox item1, PictureBox item2)
         {
-            if (p1.Location.X + p1.Width < p2.Location.X) 
+            if (item1.Location.X + item1.Width < item2.Location.X) 
                 return false;
-            if (p2.Location.X + p2.Width < p1.Location.X)
+            if (item2.Location.X + item2.Width < item1.Location.X)
                 return false;
-            if (p1.Location.Y + p1.Height < p2.Location.Y)
+            if (item1.Location.Y + item1.Height < item2.Location.Y)
                 return false;
-            if (p2.Location.Y + p2.Height < p1.Location.Y)
+            if (item2.Location.Y + item2.Height < item1.Location.Y)
                 return false;
             return true;
         }
