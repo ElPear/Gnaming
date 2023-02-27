@@ -1,6 +1,6 @@
-        private bool Colliding(PictureBox item1, PictureBox item2)
+        bool Colliding(Control item1, Control item2)
         {
-            if (item1.Location.X + item1.Width < item2.Location.X) 
+            if (item1.Location.X + item1.Width < item2.Location.X)
                 return false;
             if (item2.Location.X + item2.Width < item1.Location.X)
                 return false;
